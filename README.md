@@ -11,3 +11,15 @@ Group Creation: Assemble users into groups for targeted messaging or other group
 # Prerequisites 📋
 .NET Core SDK (at least version 3.1)
 System.Net.Http namespace
+
+# Send Message 
+var response = await service.SendMessage("91xxxxxxxx", "Your Message");
+Console.WriteLine(response);
+
+# Send Media 
+var response = await service.SendMediaMessage("91xxxxxxxx", "Your Message", "https://media-url.com/image.jpg");
+Console.WriteLine(response);
+
+# Create Group 
+var response = await service.CreateGroup("91xxxxxxxx,91xxxxxxx", "My Group");
+Console.WriteLine(response);
